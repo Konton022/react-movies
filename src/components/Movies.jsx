@@ -3,7 +3,7 @@ import { Movie } from './Movie'
 
 function Movies({ movies }) {
   return (
-    <div className="movies">
+    <div className="movies cards">
       {movies.Search
         ? movies.Search.map(({ Title, Poster, Type, Year, imdbID }) => {
             // console.log('item', item)
