@@ -1,7 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { Movie } from './Movie'
 
-function Movies() {
-    return <div className="movies"></div>;
+function Movies({ movies }) {
+  return (
+    <div className="movies">
+      {movies.Search
+        ? movies.Search.map(({ Title, Poster, Type, Year, imdbID }) => {
+            // console.log('item', item)
+            return (
+              <div key={imdbID}>
+                <Movie title={Title} poster={Poster} type={Type} year={Year} />
+              </div>
+            )
+          })
+        : null}
+    </div>
+  )
 }
 
-export { Movies };
+export { Movies }

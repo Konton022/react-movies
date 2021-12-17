@@ -1,9 +1,11 @@
 import React from 'react';
+import { Movies } from '../components/Movies';
 
-const Main = () => {
+const Main = ({movies}) => {
+
 	return (
 		<main className='container content'>
-			Hello from Movies app
+			<Movies movies={movies} />
 		</main>
 	);
 }
