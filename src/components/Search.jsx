@@ -10,8 +10,6 @@ const Search = ({ onSearchChange }) => {
     };
 
     const handleFilter = (event) => {
-        console.log('event', event.target.dataset.type);
-        //event.preventDefault();
         setType(event.target.dataset.type);
         onSearchChange(search, event.target.dataset.type);
     };
