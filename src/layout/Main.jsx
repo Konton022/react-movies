@@ -20,7 +20,7 @@ class Main extends React.Component {
             });
     }
 
-    getMovies = ({ search, type = 'all' }) => {
+    getMovies = (search, type = 'all') => {
         this.setState({ loading: true });
         fetch(
             `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}${
